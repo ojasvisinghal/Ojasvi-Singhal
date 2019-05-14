@@ -1,12 +1,27 @@
+$top-nav-color: #151414;
+$nav-text-color: white;
+$tab-click: #ffa50069;
 
 .formatting {
-    background-color: #151414;
-    height: 75px;
+    background-color: $top-nav-color;
+    height: 89px;
 }
 
 .text-format{
-    color: #bfa8a8;
+    color: $nav-text-color;
     font-size: larger;
     font-family: inherit;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+.p-2 {
+    padding: .6rem!important;
+    padding-top: 1.2rem!important;
+    text-align: center;
+}
+
+.border{
+    padding-top: 90px;
+    background-color: orange;
+    height: 5.8rem;
 }

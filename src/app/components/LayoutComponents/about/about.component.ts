@@ -6,31 +6,38 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
   animations: [
-    trigger('slideLeft', [
-      state('left', style({
-        backgroundColor: 'green',
-        paddingLeft: '10px',
-        width: '10px',
-        height: '10px'
+    trigger('rotateflip', [
+      state('top', style({
+        height: '0px'
       })),
-      state('right', style({
-        backgroundColor: 'pink',
-        width: '200px',
-        paddingLeft: '88px',
-        height: '200px'
+      state('down', style({
+        backgroundColor: 'orange',
+        height: '525px'
       })),
-      transition('left<=>right', animate('0.2s 100ms ease-out'))
+      transition('*=>top', animate('0.2s 100ms ease-out')),
+      transition('top=>*', animate('0.1s 50ms ease-in'))
     ])
   ]
 })
 export class AboutComponent implements OnInit {
 
-  aco = 'left';
+  heading:string = "About Me";
+  initialStateLeft:string = "top";
+  initialStateRight:string = "down";
 
-  constructor() { }
+  constructor() {
+    setInterval(() => {
+      console.log("ddd");
+      this.callFuntionAtIntervals();
+  }, 2000);
+   }
+
+   callFuntionAtIntervals(){
+    this.initialStateLeft = this.initialStateLeft == "top"? "down":"top";
+    this.initialStateRight = this.initialStateRight == "down"? "top":"down";
+   }
 
   ngOnInit() {
-    this.aco = 'right';
   }
 
 }

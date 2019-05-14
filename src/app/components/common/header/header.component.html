@@ -1,9 +1,10 @@
 <!-- <nav class="formatting"> -->
     <header class="d-flex justify-content-center formatting fixed-top">
-        <div class="text-format p-2  bd-highlight" [routerLink]="['/about']" (click)="about()">About</div>
-        <div class="text-format p-2  bd-highlight" [routerLink]="['/experience']" (click)="experience()">Experience</div>
-        <div class="text-format p-2  bd-highlight" [routerLink]="['/education']" (click)="education()">Education</div>
-        <div class="text-format p-2  bd-highlight" [routerLink]="['/skills']"(click)="skills()">Skills</div>
-        <div class="text-format p-2  bd-highlight" [routerLink]="['/contact']" (click)="contact()">contact</div>
+        <div class="text-format p-2  bd-highlight" [@smash]="plain1" [routerLink]="['/about']" (click)="about()">About</div>
+        <div class="text-format p-2  bd-highlight" [@smash]="plain2" [routerLink]="['/experience']" (click)="experience()">Experience</div>
+        <div class="text-format p-2  bd-highlight" [@smash]="plain3"  [routerLink]="['/education']" (click)="education()">Education</div>
+        <div class="text-format p-2  bd-highlight" [@smash]="plain4"  [routerLink]="['/skills']"(click)="skills()">Skills</div>
+        <div class="text-format p-2  bd-highlight" [@smash]="plain5"  [routerLink]="['/contact']" (click)="contact()">Contact</div>
     </header>
+    <div class = "border">&nbsp;</div>
 <!-- </nav> -->

@@ -14,6 +14,8 @@ import { EducationComponent } from './components/LayoutComponents/education/educ
 import { SkillsComponent } from './components/LayoutComponents/skills/skills.component';
 import { ContactComponent } from './components/LayoutComponents/contact/contact.component';
 import { routing } from './app.routing';
+import { PageHeaderComponent } from './components/LayoutComponents/common/page-header/page-header.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { routing } from './app.routing';
     ExperienceComponent,
     EducationComponent,
     SkillsComponent,
-    ContactComponent
+    ContactComponent,
+    PageHeaderComponent
   ],
   imports: [
     BrowserModule,

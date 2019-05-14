@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ghBuild": "ng build --prod --base-href 'https://ojasvisinghal.github.io/Ojasvi-Singhal/'",
+    "deploy": "ngh --dir dist/Ojasvi-Singhal",
+    "git_deploy":"npm run ghBuild && npm run deploy"
   },
   "private": true,
   "dependencies": {
